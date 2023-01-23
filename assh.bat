@@ -1,0 +1,32 @@
+@echo off
+cls
+:Begin
+echo ----------- Please Select a Server and Press ENTER or CTRL+C To Quit -----------
+echo.
+echo 1. YOUR_FRIENDLY_HOST_NAME_1
+echo 2. YOUR_FRIENDLY_HOST_NAME_2
+echo 3. YOUR_FRIENDLY_HOST_NAME_3
+echo 4. YOUR_FRIENDLY_HOST_NAME_4
+echo 5. YOUR_FRIENDLY_HOST_NAME_5
+echo.
+set /p Input=Enter number of selection:
+If /I "%Input%"=="1" goto YOUR_FRIENDLY_HOST_NAME_1
+If /I "%Input%"=="2" goto YOUR_FRIENDLY_HOST_NAME_2
+If /I "%Input%"=="3" goto YOUR_FRIENDLY_HOST_NAME_3
+If /I "%Input%"=="4" goto YOUR_FRIENDLY_HOST_NAME_4
+If /I "%Input%"=="5" goto YOUR_FRIENDLY_HOST_NAME_5
+goto no
+:YOUR_FRIENDLY_HOST_NAME_1
+ssh USERNAME@YOUR_ACTUAL_HOST_NAME_OR_IP_1
+:YOUR_FRIENDLY_HOST_NAME_2
+ssh USERNAME@YOUR_ACTUAL_HOST_NAME_OR_IP_2
+:YOUR_FRIENDLY_HOST_NAME_3
+ssh USERNAME@YOUR_ACTUAL_HOST_NAME_OR_IP_3
+:YOUR_FRIENDLY_HOST_NAME_4
+ssh USERNAME@YOUR_ACTUAL_HOST_NAME_OR_IP_4
+:YOUR_FRIENDLY_HOST_NAME_5
+ssh USERNAME@YOUR_ACTUAL_HOST_NAME_OR_IP_5
+:no
+echo Invalid selection,
+pause
+goto begin
